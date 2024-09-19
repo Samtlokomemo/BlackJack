@@ -1,3 +1,5 @@
+let valor = 0;
+
 //PEGAR OS DADOS DA API
 function urlGet(url) {
     let request = new XMLHttpRequest();
@@ -22,15 +24,31 @@ function criarLinha(carta, isSua) {
     }
 
     linha.appendChild(tdImagem);
+    if (carta.value == "JACK") {
+        valor += 11;
+    } else if (carta.value == "QUEEN") {
+        valor += 12;
+    } else if (carta.value == "KING") {
+        valor += 13;
+    } else if (carta.value == "ACE") {
+        valor += 1;
+    } else {
+        valor += parseInt(carta.value);
+    }
 
-    let soma = carta.value;
-    console.log(soma)
+
+    console.log(valor)
     return linha;
 }
 
 const botao = document.getElementById('pegar-carta');
 botao.addEventListener('click', function () {
     main()
+});
+
+const botaoParar = document.getElementById('parar');
+botao.addEventListener('click', function () {
+    //CÓDIGO DAS CARTAS DO INIMIGO
 });
 
 //ONDE TUDO ACONTECE
@@ -43,6 +61,9 @@ function main() {
         let linha = criarLinha(carta);
         tabela.appendChild(linha);
     });
+
+    let paragrafoSoma = document.getElementById('soma-texto');
+    paragrafoSoma.textContent = "PONTOS: " + valor;
 }
 
 

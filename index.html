@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css" />
-    <title>Deck</title>
+    <title>Cardgames</title>
 </head>
+
 <header>
-    TITULO DO SITE E MENU
+    <h2>CARD 'n' GAMES</h2>
 </header>
 
 <body>
@@ -16,11 +18,18 @@
         <table id="cartas"></table>
     </div>
     <div id="botao">
-        <button id="pegar-carta">PEGAR CARTA</button>
+        <button id="pegar-carta">
+            <span>PEGAR CARTA</span>
+        </button>
+        <button id="parar">
+            <span>PARAR</span>
+        </button>
     </div>
     <div id="soma">
-        <p id="soma">SOMA: </p>
+        <p id="soma-texto">PONTOS: 0</p>
     </div>
+
+
     <script src="app.js"></script>
 </body>
 <footer>
