@@ -1,0 +1,43 @@
+#cartas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: aliceblue;
+    position: fixed;
+    /*Muda a posição dele para baixo e no meio*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /*Deixa o rodapé na horizontal toda*/
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: aliceblue;
+    position: relative;
+    /*Muda a posição dele para baixo e no meio*/
+    left: 0;
+    right: 0;
+    width: 100%;
+    /*Deixa o rodapé na horizontal toda*/
+}
